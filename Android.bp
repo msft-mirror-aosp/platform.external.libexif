@@ -67,7 +67,7 @@ cc_library_shared {
 
     sanitize: {
         integer_overflow: true,
-        blacklist: "libexif_blacklist.txt",
+        blocklist: "libexif_blocklist.txt",
     },
 }
 
