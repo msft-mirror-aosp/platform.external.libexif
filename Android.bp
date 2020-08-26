@@ -18,6 +18,7 @@
 // a static library or otherwise statically link libexif with your code.
 cc_library_shared {
     name: "libexif",
+    host_supported: true,
     vendor_available: true,
     vndk: {
         enabled: true,
@@ -66,7 +67,7 @@ cc_library_shared {
 
     sanitize: {
         integer_overflow: true,
-        blacklist: "libexif_blacklist.txt",
+        blocklist: "libexif_blocklist.txt",
     },
 }
 
