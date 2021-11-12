@@ -342,6 +342,8 @@ exif_mnote_data_fuji_new (ExifMem *mem)
 	d = exif_mem_alloc (mem, sizeof (ExifMnoteDataFuji));
 	if (!d) return NULL;
 
+        memset(d, 0, sizeof(ExifMnoteDataFuji));
+
 	exif_mnote_data_construct (d, mem);
 
 	/* Set up function pointers */
