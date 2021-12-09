@@ -236,6 +236,8 @@ exif_mnote_data_canon_load (ExifMnoteData *ne,
 	tcount = 0;
 	for (i = c, o = datao; i; --i, o += 12) {
 		size_t s;
+
+		memset(&n->entries[tcount], 0, sizeof(MnoteCanonEntry));
 		if (CHECKOVERFLOW(o,buf_size,12)) {
 			exif_log (ne->log, EXIF_LOG_CODE_CORRUPT_DATA,
 				"ExifMnoteCanon", "Short MakerNote");
