@@ -443,6 +443,8 @@ exif_mnote_data_pentax_new (ExifMem *mem)
 	d = exif_mem_alloc (mem, sizeof (ExifMnoteDataPentax));
 	if (!d) return NULL;
 
+        memset(d, 0, sizeof(ExifMnoteDataPentax));
+
 	exif_mnote_data_construct (d, mem);
 
 	/* Set up function pointers */
